@@ -7,5 +7,7 @@ public static void main(String[] args) {
 	obj.setName("Priya");
 	System.out.println(obj.getId());
 	System.out.println(obj.getName());
+	
+	
 }
 }
