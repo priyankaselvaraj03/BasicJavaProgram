@@ -19,7 +19,7 @@ public class DiamondPattern {
         // Bottom half of the diamond
         for (int i = n - 1; i >= 1; i--) {
           
-            for (int j = 1; j <= n - i; j++) {
+            for (int j = 1; j <= n - i; j++) {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
                 System.out.print(" ");
             }
            
@@ -28,5 +28,7 @@ public class DiamondPattern {
             }
             System.out.println(); 
         }
+        
+        
     }
 }

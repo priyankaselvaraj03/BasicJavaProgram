@@ -142,25 +142,71 @@ public class Progarm {
 		} else {
 			System.out.println("Not a prime");
 		}
-		
-		//Anagram
-		
-		String s13="prIya";
-		String s14="pryia";
-		String s15=s13.toLowerCase();
-		String s16=s14.toLowerCase();
-		char a1[]=s15.toCharArray();
-		char a2[]=s16.toCharArray();
-		
-		if(a1.length!=a2.length) {
+
+		// Anagram
+
+		String s13 = "prIya";
+		String s14 = "pryia";
+		String s15 = s13.toLowerCase();
+		String s16 = s14.toLowerCase();
+		char a1[] = s15.toCharArray();
+		char a2[] = s16.toCharArray();
+
+		if (a1.length != a2.length) {
 			System.out.println("Not an anagram");
-		}else {
+		} else {
 			Arrays.sort(a1);
 			Arrays.sort(a2);
-			if(String.valueOf(a1).equals(String.valueOf(a2))) {
+			if (String.valueOf(a1).equals(String.valueOf(a2))) {
 				System.out.println("Anagram");
-			}else {
+			} else {
 				System.out.println("Not Anagram");
+			}
+		}
+
+		// Split and reverse a String
+		System.out.println("-------Split and reverse a strings---------");
+		String b1 = "hello world";
+		String b2[] = b1.split(" ");
+		String b3 = "";
+		for (int i = 0; i < b2.length; i++) {
+			b3 = "";
+			for (int j1 = b2[i].length() - 1; j1 >= 0; j1--) {
+
+				b3 = b3 + b2[i].charAt(j1);
+
+			}
+			System.out.println(b3);
+		}
+
+		// Remove space in String
+		System.out.println("--------Remove Space in String--------");
+		String b4 = "hello world";
+		String b5 = "";
+		for (int i = 0; i < b4.length(); i++) {
+			if (b4.charAt(i) != ' ') {
+				b5 = b5 + b4.charAt(i);
+			}
+		}
+		System.out.println("After space remove \n" + b5);
+
+		// Count each character in a String
+		System.out.println("------Counting Occurance---------");
+		String b6 = "hello world";
+		int count1 = 0;
+		String b7 = "";
+		for (int i = 0; i < b6.length(); i++) {
+			count1 = 0;
+			if (b6.charAt(i) != ' ') {
+				if (!b7.contains(String.valueOf(b6.charAt(i)))) {
+					for (int j1 = 0; j1 < b6.length(); j1++) {
+						if (b6.charAt(i) == b6.charAt(j1)) {
+							count1++;
+						}
+					}
+					b7 = b7 + b6.charAt(i);
+					System.out.println(b6.charAt(i) + " = " + count1);
+				}
 			}
 		}
 
